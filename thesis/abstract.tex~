@@ -1,6 +1,0 @@
-We develop and test a framework to compute numerically the
-analytical continuation of some static solutions of non linear
-field equations. The holomorphic nature of the static solution
-enable us to treat the analytical continuation as an initial value
-problem, which can be integrated using standard numerical
-procedues avaliable for initial value differential problems.
