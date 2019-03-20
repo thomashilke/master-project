@@ -1,0 +1,402 @@
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents
+\end{frame}
+
+\begin{section}{Introduction}
+  \begin{frame}
+    \frametitle{Introduction}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Field Theories in Nature}
+    \begin{itemize}
+    \item The Standard Model of elementary particles
+    \item The theory of gravitation
+    \item Hydrodynamics
+    \item Neuron activity in the brain
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Field theory reminds}
+    A field theory is defined by its Lagrangian density, or action:
+    \begin{equation*}
+      S = \int\mathrm d^4 x \mathcal L(x^\mu,\phi, \partial_\mu\phi).
+    \end{equation*}
+    The first order of variation of the action must vanish around the
+    classical field configuration:
+    \begin{equation*}
+      \delta S = \int\mathrm d^4 x\delta\mathcal L(x^\mu,\phi, \partial_\mu\phi),
+    \end{equation*}
+    leading to the field equations:
+    \begin{equation*}
+      \frac{\partial \mathcal L}{\partial \phi}-\partial_\mu\frac{\partial\mathcal L}{\partial\partial_\mu\phi}=0.
+    \end{equation*}
+    \end{frame}
+
+    \begin{frame}
+      \frametitle{A particular field configuration: Soliton}
+      A soliton is a solution of the field equation which:
+      \begin{itemize}
+      \item is time independant
+      \item has a finite energy
+      \end{itemize}
+      Many modern particle theories exibit such solutions on the
+      classical level.
+
+      They are very popular in cosmology:
+      \begin{itemize}
+      \item Cosmic strings, domain walls, and attempts to localize gravity, wrap dimensions
+      \item Magnetic monopoles as WIMPs
+      \item Monopoles are a feature of many GUTs
+      \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+      \frametitle{A particular field configuration: Instanton}
+      An instanton is a solution of the field equations which is
+      \begin{itemize}
+      \item in euclidian time,
+      \item localised in time and space.
+      \end{itemize}
+      Again, instanton is common in many nowadays theories.
+    \end{frame}
+
+\end{section}
+
+\begin{section}{Mathematical Framework}
+  \begin{frame}
+    \frametitle{Mathematical Framework}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{The problem of analytic continuation}
+    The situation
+    arise when we have a field configuration in Minkowski time we
+    want to evaluate in Euclidian time:
+
+    \begin{equation}
+      r=\sqrt{x^2+\tau^2}\xrightarrow{\tau\to -it}\sqrt{x^2-t^2}.
+    \end{equation}
+    If $t>x$:
+    \begin{equation*}
+      r = \pm i \sqrt{|t^2-x^2|} = \pm i s.
+    \end{equation*}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{The problem of analytic continuation}
+    Let $\vec f(r)$ be a function defined by:
+    \begin{equation*}
+      \vec f'(x) = \vec F(x, \vec f(x)).
+    \end{equation*}
+    The analytic continuation of $f(r)$, noted $\tilde f(z)$ is
+    obtained by extending the derivative to the complex part:
+    \begin{align*}
+      &f'(x)\to \frac{\partial f}{\partial z}\equiv \partial_x f_{\mathrm R}(x+iy)+i\partial_x f_{\mathrm I}(x+iy),\\
+      &\Rightarrow \partial_x f_{\mathrm R}(z)+i\partial_x f_{\mathrm I}(z) = F_{\mathrm R}(z,\tilde f(z))+F_{\mathrm I}(z,\tilde f(z)).
+    \end{align*}
+  \end{frame}
+  \begin{frame}
+    \frametitle{Cauchy-Riemann equations}
+    The Cauchy-Riemann equations allow us to write the system in terms of the derivatives w.r.t the complex coordinate:
+    \begin{align*}
+      &\left\{\begin{aligned}
+      &\partial_x f_{\mathrm R} = \partial_y f_{\mathrm I},\\
+      &\partial_x f_{\mathrm I} = -\partial_y f_{\mathrm R},
+      \end{aligned}\right.
+    \end{align*}
+    which lead to the Cauchy problem:
+    \begin{align*}
+      \Rightarrow&\left\{\begin{aligned}
+      &\partial_y f_{\mathrm I} = F_{\mathrm R}(z,\tilde f(z)),\\
+      &\partial_y f_{\mathrm R} = -F_{\mathrm I}(z,\tilde f(z)).
+      \end{aligned}\right.
+    \end{align*}
+  \end{frame}
+  \begin{frame}
+    \frametitle{Choice of coordinate system}
+    This is not enough in the following situation:
+    \input{../figures/coordeffect.tex}
+    but can be addressed with a change of coordinate.
+  \end{frame}
+  \begin{frame}
+    \frametitle{Change to polar coordinate}
+    Define the new polar coordinates:
+    \begin{align*}
+      \left\{\begin{aligned}
+      &x = r\cos\theta, \\
+      &y = r\sin\theta.
+      \end{aligned}\right.
+    \end{align*}
+    Using the Cauchy-Riemann equations, we can rewrite the previous
+    Cauchy problem for the $\theta$ variable:
+    \begin{align*}
+      \begin{bmatrix}
+      -\partial_\theta f_{\mathrm R}(r,\theta)\\
+      \partial_\theta f_{\mathrm I}(r,\theta)
+      \end{bmatrix}
+      = r
+      \begin{bmatrix}
+        \cos\theta & \sin\theta\\
+        -\sin\theta & \cos\theta\\
+      \end{bmatrix}
+      \begin{bmatrix}
+        F_{\mathrm I}(z,\tilde f(z))\\
+        F_{\mathrm R}(z,\tilde f(z))
+      \end{bmatrix}.
+    \end{align*}
+  \end{frame}
+
+\end{section}
+
+\begin{section}{First tests}
+  \begin{frame}
+    \frametitle{First Tests}
+    We now want to test the framework on a set of known functions:
+    \begin{itemize}
+    \item The square root
+    \item The natural logarithm
+    \item An instanton of the quantum pendulum equation
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{The square root}
+    \begin{enumerate}
+    \item The square root is defined by the differential equation:
+      \begin{align*}
+        f(x) = \sqrt{x} \Rightarrow f'(x) = \frac{1}{2}\frac{1}{\sqrt{x}} = \frac{1}{2f(x)},
+      \end{align*}
+      \item which leads to the Cauchy problem:
+        \begin{align*}
+          \left\{
+          \begin{aligned}
+            &\partial_yf_I(z) = \frac{f_R(z)}{2(f_R^2(z)+f_I^2(z))}\\
+            &-\partial_yf_R(z) = -\frac{f_I(z)}{2(f_R^2(z)+f_I^2(z))}
+          \end{aligned}
+          \qquad
+          \right|
+          \qquad
+          \begin{aligned}
+            &f_{\mathrm R}(x+i0) = \sqrt{x}\\
+            &f_{\mathrm I}(x+i0) = 0
+          \end{aligned}
+        \end{align*}
+    \end{enumerate}
+  \end{frame}
+  \begin{frame}
+    \frametitle{Numerical analytic continuation of the Square Root}
+    \input{../figures/sqrt_riemann_real.tex}
+    \input{../figures/sqrt_riemann_imag.tex}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{The Natural Logarithm}
+    \begin{enumerate}
+    \item The natural logarithm is defined by the differential equation:
+      \begin{align*}
+        f(x) = \log(x) \Rightarrow f'(x) = \frac{1}{x} = \exp(-f(x)),
+      \end{align*}
+      \item which leads to the Cauchy problem:
+        \begin{align*}
+          \left\{
+          \begin{aligned}
+            &\partial_yf_I(z) = \exp(-f_R(z))\cos(f_I)\\
+            &-\partial_yf_R(z) = -\exp(-f_R(z))\sin(f_I)
+          \end{aligned}
+          \qquad
+          \right|
+          \qquad
+          \begin{aligned}
+            &f_{\mathrm R}(x+i0) = \log(x)\\
+            &f_{\mathrm I}(x+i0) = 0
+          \end{aligned}
+        \end{align*}
+    \end{enumerate}
+  \end{frame}
+  \begin{frame}
+    \frametitle{Numerical analytic continuation of the Logarithm}
+    \input{../figures/log_riemann_real.tex}
+    \input{../figures/log_riemann_imag.tex}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{The Quantum Pendulum}
+    We consider the Lagrangian of a quantum particle in a cosine potential:
+    \begin{align*}
+      \mathcal L = \frac{1}{2}\dot\phi^2-(1-\cos(\phi))
+    \end{align*}
+    \begin{itemize}
+    \item Equation of motion: $\ddot \phi = \sin(\theta),$
+    \item Energy: $E = \frac{1}{2}\dot\phi^2+(1-\cos(\phi)).$
+    \end{itemize}
+    A solution of 0 energy reads:
+    \begin{align*}
+      \phi(t) = 4\arctan(\exp(t)).
+    \end{align*}
+  \end{frame}
+  \begin{frame}
+    \frametitle{Numerical analytic continuation of the Quantum pentulum}
+    Real part:
+    \input{../figures/sine_real.tex}
+  \end{frame}
+  \begin{frame}
+    \frametitle{Numerical analytic continuation of the Quantum pentulum}
+    Imaginary part:
+    \input{../figures/sine_imag.tex}
+  \end{frame}
+
+
+\end{section}
+
+\begin{section}{Classical field theory situations}
+  \begin{frame}
+    \frametitle{Classical field theory situations}
+    \begin{itemize}
+    \item Abelian Vortex of a complex scalar in $(2+1)$ dimensions,
+      with $U(1)$ gauge symmetry
+    \item Non-Abelian Monopole of a real scalar triplet in $(3+1)$
+      dimensions, with $SU(2)$ gauge symmetry. (Georgi-Glashow model)
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Abelian Vortex}
+    The Lagrangian of the  theory reads:
+    \begin{align*}
+      \mathcal L = \frac{1}{2}\mathrm D_\mu\phi^*\mathrm D_\mu\phi-\frac{\lambda}{2}(\phi^*\phi-v^2)^2-\frac{1}{4}F_{\mu\nu}^2.
+    \end{align*}
+    \begin{itemize}
+    \item Field equations:
+      \begin{align*}
+        &\partial^\nu F_{\nu\mu}=ie(\phi^*\mathrm D_\mu-\phi\mathrm D_\mu\phi^*),\\
+        &\mathrm D^\mu\mathrm D_\mu\phi+\lambda(\phi^*\phi-v^2)\phi=0\ \&\ c.c. .
+      \end{align*}
+    \item Energy functional, static case:
+      \begin{align*}
+        E = 4\pi\int_0^\infty r^2\mathrm d r\left(\frac{1}{4}F_{ij}F_{ij}+\frac{1}{2}\mathrm D_i\phi\mathrm D_i\phi^*+\frac{\lambda}{2}(\phi^*\phi-v^2)^2\right).
+      \end{align*}
+    \end{itemize}
+  \end{frame}
+  \begin{frame}
+    \frametitle{Static, Spherically symmetric ansatz} The simplest
+    spherically symmetric static solution can be expressed with the
+    ansatz:
+    \begin{align*}
+      &\phi(r,\theta) = ve^{i\theta}F(r),\\
+      &A_i(r) = -\frac{1}{er}\varepsilon_{ij}n_jA(r).
+    \end{align*}
+    Leading to the equations for $f(a)$ and $a(r)$:
+    \begin{align*}
+      &-\frac{\mathrm d}{\mathrm d r}\left[\frac{1}{r}\frac{\mathrm d A}{\mathrm dr}\right] -2e^2v^2\frac{F^2(1-A)}{r} = 0,\\
+      &-\frac{\mathrm d}{\mathrm d r}\left[r\frac{\mathrm d F}{\mathrm dr}\right] +\lambda v^2 r(F^2-1)F+\frac{F}{r}(A-1)^2 = 0.
+    \end{align*}
+  \end{frame}
+  \begin{frame}
+    \frametitle{Vortex profile}
+    Higgs field:
+    \input{../figures/vortex_func_f.tex}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Vortex profile}
+    Gauge Field:
+    \input{../figures/vortex_func_a.tex}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Analytic continuation of the Vortex}
+    Real part of the Higgs field:
+    \input{../figures/vortex_anal_f_real.tex}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Analytic continuation of the Vortex}
+    Real part of the gauge field:
+    \input{../figures/vortex_anal_a_real.tex}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Non-Abelian Monopole}
+    The Lagrangian of the  theory reads:
+    \begin{align*}
+      \mathcal L = \frac{1}{2}\mathrm D_\mu\phi^a\mathrm D_\mu\phi^a-\frac{\lambda}{2}(\phi^a\phi^a-v^2)^2-\frac{1}{4}F_{\mu\nu}^aF_{\mu\nu}^a.
+    \end{align*}
+    \begin{itemize}
+    \item Field equations:
+      \begin{align*}
+        &\mathrm D_\mu\mathrm D_\mu\phi^a+\lambda\phi^a(\phi^b\phi^b-v^2) = 0,\\
+        &\partial^\nu F^a_{\nu\mu}=g\varepsilon^{abc}(A_\nu^bF_\mu^{c,\nu}+\mathrm D_\mu\phi^b\phi^c).
+      \end{align*}
+    \item Energy functional, static case:
+      \begin{align*}
+        E=4\pi\int_0^\infty r^2\mathrm dr\left(\frac{1}{4}F_{ij}^aF_{ij}^a+\frac{1}{2}\mathrm D_i\phi^a\mathrm D_i\phi^a +\frac{\lambda}{4}(\phi^a\phi^a-v^2)^2\right).
+      \end{align*}
+    \end{itemize}
+  \end{frame}
+  \begin{frame}
+    \frametitle{'t Hooft--Polyakov ansatz} The first non-trivial
+    static field configuration was proposed by 't Hooft \& Polyakof:
+    \begin{align*}
+      \left\{
+      \begin{aligned}
+        &\phi^a(r,\theta) = vn^ah(r),\\
+        &A^a_i(r) = \frac{1}{gr^2}\varepsilon^{aij}n_j(1-f(r)),\ A_0^a = 0.
+      \end{aligned}
+      \right.
+    \end{align*}
+    Which lead to the field equations for $f(r)$ and $h(r)$:
+    \begin{align*}
+      &r^2h''=2hf^2+\lambda v^2 h(h^2-r^2),\\
+      &r^2f''=f(f^2-1)-gv^2h^2f.
+    \end{align*}
+  \end{frame}
+  \begin{frame}
+    \frametitle{Bogomol'nyi--Prasad--Sommerfield limit} If we set the Higgs coupling constant to
+    zero, the solution can be expressed in a simple form:
+    \begin{align*}
+      f(r) = \frac{r}{\sinh(r)}\quad;\quad h(r) = \sqrt{gv^2}(r\mathrm{coth}(r)-1).
+    \end{align*}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Monopole profile}
+    Higgs field profiled:
+    \input{../figures/monopole_funcs_f.tex}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Monopole profile}
+    Gauge field profile:
+    \input{../figures/monopole_funcs_a.tex}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Analytic continuation of the Monopole}
+    Real part of the Higgs field:
+    \input{../figures/monopole_anal_f_real.tex}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Analytic continuation of the Monopole}
+    Real part of the gauge field:
+    \input{../figures/monopole_anal_h_real.tex}
+  \end{frame}
+\end{section}
+
+\begin{section}{Conclusions \& Future Work}
+  \begin{frame}
+    \frametitle{Conclusions \& Future Work}
+    \begin{itemize}
+    \item Numerical framework to find the analytical continuation of a function,
+    \item Successfully tested on a set of different situations,
+    \item Proved on the numerical level that the Wick rotation of the abelian vortex and non-abelian vortex is valid.
+    \item Additional arguments are required in order to corroborate numerical results.
+    \end{itemize}
+  \end{frame}
+  \begin{frame}
+    \frametitle{Questions?}
+  \end{frame}
+\end{section}
