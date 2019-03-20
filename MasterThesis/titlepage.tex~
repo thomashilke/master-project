@@ -1,0 +1,46 @@
+\begin{adjustwidth}{-4.1cm}{-4.1cm}
+  \center
+  \parbox{16cm}{\center \LARGE \sc
+    Ecole Polytechnique Fédérale de Lausanne\\
+    \parbox{\textwidth}{\center \large
+      Institut de Théorie des Phénomènes Physiques\\
+      Laboratoire de Physique des Particules et Cosmologie}
+    \vspace{1cm}
+  }
+  
+  \parbox{\textwidth}{\Huge\center
+    Master Project
+    \vspace{1cm}}
+  
+  \rule{18cm}{4pt}
+  \parbox{16cm}{
+    \vspace{1cm}
+    \Huge
+    On the Analytic Continuation to Minkowski
+    Time of Solitons in Classical Field Theories
+    \vspace{1cm}
+  }
+  \rule{18cm}{4pt}
+  
+  \vspace{2cm}
+  \begin{abstract}
+    \center
+    \parbox{11cm}{
+      \setlength{\parindent}{18pt}
+      \em \input{abstract}
+    }
+  \end{abstract}
+  
+  \parbox{10cm}{\vspace{2cm}\center \large
+    {\bfseries Thomas Foetisch}, \today
+  }
+  
+  \vspace{4cm}
+  \parbox[t]{9cm}{\flushleft \large
+    This work was achieved under the supervision of:
+  }
+  \parbox[t]{7cm}{\flushright \large
+    Prof. Mikhail Shaposhnikov\\
+    Ph.D. Alexander Monin
+  }
+\end{adjustwidth}

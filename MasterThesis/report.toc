@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Introduction}{5}
+\contentsline {section}{\numberline {2}Numerical Scheme}{5}
+\contentsline {subsection}{\numberline {2.1}Polar coordinates}{7}
+\contentsline {subsection}{\numberline {2.2}Vortex and Monopole solutions}{8}
+\contentsline {subsubsection}{\numberline {2.2.1}The Vortex in $(2+1)$ dimensions}{8}
+\contentsline {subsubsection}{\numberline {2.2.2}The Monopole in $(3+1)$ dimensions}{11}
+\contentsline {section}{\numberline {3}Validity tests}{12}
+\contentsline {subsection}{\numberline {3.1}Riemann sheet: the square root}{13}
+\contentsline {subsection}{\numberline {3.2}The logarithm}{14}
+\contentsline {subsection}{\numberline {3.3}Quantum pendulum in gravitation}{15}
+\contentsline {section}{\numberline {4}Application to the Vortex in $(2+1)$ dimensions}{18}
+\contentsline {subsection}{\numberline {4.1}Numerical analytic continuation in the BPS limit}{21}
+\contentsline {subsection}{\numberline {4.2}Analytic study of the convergence of the Taylor Series}{22}
+\contentsline {section}{\numberline {5}Application to the Monopole in $(3+1)$ dimensions}{24}
+\contentsline {subsection}{\numberline {5.1}Numerical analytic continuation in the BPS limit}{26}
+\contentsline {subsection}{\numberline {5.2}Numerical analytic continuation, $\lambda \not =0$}{27}
+\contentsline {section}{\numberline {6}Conclusion}{28}
+\contentsline {section}{Appendices}{31}
+\contentsline {section}{\numberline {A}Field equations for Georgi-Glashow model. Monopole solution.}{31}
+\contentsline {subsection}{\numberline {A.1}Energy functionnal}{32}
+\contentsline {section}{\numberline {B}Numerical integration of the equations of motion: the case of the Vortex}{33}
