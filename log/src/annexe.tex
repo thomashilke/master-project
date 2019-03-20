@@ -1,0 +1,206 @@
+\begin{section}{Sign conventions}
+  The Riemann's tensor is defined up to a sign. We distinguish two conventions.
+  \begin{subsection}{Wald conventions}
+    The action is defined by:
+    \begin{align}
+      S=\int\mathrm d^4 x\sqrt{-g}\left(\frac{1}{16\pi G}R+\mathcal L_\mathrm M\right)
+    \end{align}
+    where the Riemann tensor is defined by:
+    \begin{align}
+      R_{abc}^{\hphantom{abc}d} &= 2\left[-\partial_{[a}\Gamma_{\hphantom{d}b]c}^d+\Gamma_{\hphantom{e}c[a}^e\Gamma^{d}_{\hphantom{d}b]e}\right]\\
+      &= \partial_{b}\Gamma_{\hphantom{b}ac}^{d}-\partial_{a}\Gamma_{\hphantom{d}bc}^{d}+\Gamma_{\hphantom{d}be}^{d}\Gamma_{\hphantom{e}ca}^{e}-\Gamma_{\hphantom{d}ae}^{d}\Gamma_{\hphantom{e}cb}^{e}
+    \end{align}    
+    The Einstein field equation hence writes:
+    \begin{align}
+      R_{ab}-\frac{1}{2}g_{ab}R-g_{ab}\lambda = 8\pi GT_{ab}
+    \end{align}
+    where
+    \begin{align}
+      T_{ab} = -2\frac{\delta\mathcal L_\mathrm M}{\delta g^{ab}}-g_{ab}\mathcal L_\mathrm M
+    \end{align}
+  \end{subsection}
+
+  \begin{subsection}{Weinberg conventions}
+    In Weinberg convention, the sign of the Riemann tensor is the opposite.
+    \begin{align}
+      R^{\lambda}_{\hphantom{\lambda}\mu\nu\kappa} =
+      \partial_{\kappa}\Gamma_{\hphantom{\lambda}\mu\nu}^{\lambda}-\partial_{\nu}\Gamma_{\hphantom{\lambda}\mu\kappa}^{\lambda}+\Gamma_{\hphantom{\lambda}\kappa\eta}^{\lambda}\Gamma_{\hphantom{\eta}\mu\nu}^{\eta}-\Gamma_{\hphantom{\lambda}\nu\eta}^{\lambda}\Gamma_{\hphantom{\eta}\mu\kappa}^{\eta}
+    \end{align}
+    The Einstein field equation hence writes:
+    \begin{align}
+      R_{ab}-\frac{1}{2}g_{ab}R-g_{ab}\lambda = -8\pi GT_{ab}
+    \end{align}
+  \end{subsection}
+  
+
+\end{section}
+\begin{section}{Substitution of the 't~Hooft-Polyakov ansatz}\label{sec:detailsmonopole}
+  We only present the intermediate steps without details which are
+  necessary to get to eq. (\ref{eq:monopole1})-(\ref{eq:monopole2}).
+  \begin{align}
+    \mathrm{D}_i\phi^a &= vh'n_in_a + v\frac{h(1-f)}{r}(\delta_{ia}-n_in_a)\\
+    \partial_i\left(\mathrm D_i\phi^a\right) &= v\frac{r^2h''+2rf'+2h(f-1)}{r^2}n_a\\
+    g\varepsilon^{abc}A_i^b\mathrm D_i\phi^c &= 2v\frac{fh(1-f)}{r^2}n_a\\
+    \Rightarrow \mathrm D_i\mathrm D_i\phi^a &= v\frac{r^2h''+2rf'+2h(f-1)}{r^2}n_a + 2v\frac{fh(1-f)}{r^2}n_a\\
+    \lambda\phi^a(\phi^b\phi^b-v^2) &= \lambda v^3 h (h^2-1) n_a
+  \end{align}
+
+
+  \begin{align}
+    \partial_iA_j^a &= \frac{rf'-2f}{gr^2}\varepsilon^{ajk}n_in_k +\frac{f}{gr^2}\varepsilon^{aji}\\
+    \partial_iA_j^a-\partial_jA_i^a &= \frac{rf'-2f}{gr^2}(\varepsilon^{ajk}n_in_k-\varepsilon^{aik}n_jn_k) +\frac{2f}{gr^2}\varepsilon^{aji}\\
+    g\varepsilon^{abc}A_i^bA_j^c &= \frac{f^2}{gr^2}\varepsilon^{ijp}n_an_p\\
+    \Rightarrow F_{ij}^a &= \frac{rf'-2f}{gr^2}(\varepsilon^{ajk}n_in_k-\varepsilon^{aik}n_jn_k) +\frac{2f}{gr^2}\varepsilon^{aji}+\frac{f^2}{gr^2}\varepsilon^{ijp}n_an_p
+  \end{align}
+
+  \begin{align}
+    \partial_iF_{ij}^a &= \frac{r^2f''-2f+f^2}{gr^3}\varepsilon^{ajk}n_k\\
+    g\varepsilon^{abc}A_i^b F_{ij}^c &= \frac{2f^2-f^3}{gr^3}\varepsilon{ajc}n_c\\
+    \Rightarrow \mathrm D^iF_{ij}^a &= -\frac{r^2f''-2f+3f^2-f^3}{gr^3}\varepsilon^{ajk}n_k
+  \end{align}
+
+  \begin{equation}
+    gj_j^a = -gv^2\frac{h^2(1-f)}{r}\varepsilon^{ajc}n_c
+  \end{equation}
+  
+\end{section}
+
+\begin{section}{Energy functional for the monopole}
+  The three terms in the energy functional (eq. (\ref{eq:staticefunc})), in terms of $f$ and $h$, writes:
+  \begin{align}
+    F_{ij}^aF_{ij}^a &= \frac{1}{g^2r^4}\left[4(rf'-2f)(rf'+2f)+2f^2(f^2-4f+12)\right]\\
+    D_i\phi^aD_i\phi^a &= v^2h'^2+2v^2\frac{h^2(1-f^2)}{r^2}\\
+    \frac{\lambda}{4}(\phi^a\phi^a-v^2)^2 &= \frac{\lambda v^4}{4}(h^2-1)^2
+  \end{align}
+\end{section}
+
+\begin{section}{LU decomposition algorithm}
+  Let $A$ be a $N\times N$ regular matrix. One can show that there
+  exist two $N\times N$ matrices $L$ and $U$ such that
+  \begin{equation}
+    A = LU
+  \end{equation}
+  where $L$ is lower triangular with unit diagonal, and $U$ is upper
+  triangular. We are looking for an algorithm to compute the
+  components of $L$ and $U$, given $A$.
+
+  We note:
+  \begin{equation}
+    A = 
+    \begin{bmatrix}
+      a_{1,1} & a_{1,2} &\cdots & a_{1,N}\\
+      a_{2,1}\\
+      \vdots\\
+      a_{N,1} & \cdots & & a_{N,N}
+    \end{bmatrix}
+  \end{equation}
+  \begin{equation}
+    L = 
+    \begin{bmatrix}
+      1 & 0 &\cdots & 0\\
+      l_{2,1} & 1\\
+      \vdots\\
+      l_{N,1} & \cdots & l_{N,N-1} & 1
+    \end{bmatrix},\ 
+    U = 
+    \begin{bmatrix}
+      u_{1,1}& u_{1,2} & \cdots & u_{1,N-1} & u_{1,N}\\
+      0 & u_{2,2} & & &\vdots\\
+      \vdots\\
+      0 & 0 &\cdots  & 0 & u_{N,N}
+    \end{bmatrix}    
+  \end{equation}
+  Choosing the diagonal of $L$ to be ones allow us to deduce the first
+  row of $U$:
+  \begin{equation}
+    a_{1,i} = \sum_{k = 1}^Nl_{1,k}u_{k,i} = u_{1,i}
+  \end{equation}
+  We can then deduce the first row of $L$:
+  \begin{equation}
+    a_{i,1} = \sum_{k = 1}^NL_{i,k}U_{k,1} = l_{i,1}u_{1,1}\ \Rightarrow\ l_{i,1} = \frac{a_{i,1}}{u_{1,1}}
+  \end{equation}
+  
+  Following the similar procedure allow us to build $U$ rows after
+  rows, and $L$ columns after columns. The induction step is the
+  following:
+  
+  Given $u_{k,i}\ \forall i,\forall k<K$, and $l_{i,k}\ \forall
+  i,\ \forall k<K$ we can first compute $u_{K,i}$, and then $l_{i,K}$
+  as follow:
+  \begin{align}
+    &a_{K,i} = \sum_{m = 1}^N l_{K,m}u_{m,i} = \sum_{m=1}^{K-1}l_{K,m}u_{m,i} + u_{K,i}\\
+    &\Longrightarrow\ u_{K,i} = a_{K,i} - \sum_{m=1}^{K-1}l_{K,m}u_{m,i},\ \forall i = K, \dots, N
+  \end{align}
+  and similarly,
+  \begin{align}
+    &a_{i,K} = \sum_{m=1}^N l_{i,m}u_{m,K} = \sum_{m=1}^{K-1} l_{i,m}u_{m,K}+l_{j,K}u_{K,K}\\
+    &\Longrightarrow l_{i,K} = \frac{1}{u_{K,K}} \left(a_{i,K}-\sum_{m=1}^{K-1} l_{i,m}u_{m,K}\right),\ \forall i = K+1,\dots,N
+  \end{align}
+  This induction step goes on until $K = N-1$, and the last step of
+  the algorithm serves to compute $u_{N,N}$ only, since $l_{N,N} = 1$:
+  \begin{align}
+    &a_{N,N} = \sum_{m=1}^{N-1}l_{N,m}u_{m,N} + u_{N,N}\\
+    &\Longrightarrow u_{N,N} = a_{N,N}-\sum_{m=1}^{N-1}l_{N,m}u_{m,N}
+  \end{align}
+
+  We note that each component of the matrix $A$ is used only once. As
+  a consequence, generalizing the algorithm to make it {\em in-place}
+  is straightforward.
+\end{section}
+
+\begin{section}{Noether and Symmetric Energy-Momentum tensor for the free Electrodynamics}
+  The Lagrangian of free electrodynamics is
+  \begin{equation}
+    \mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
+  \end{equation}
+  We easily find the field equations  $A^{\mu}$:
+  \begin{equation}
+    \partial_{\mu}F^{\mu\nu} = 0,\ \forall \nu = 0,1,2,3
+  \end{equation}
+  We note that the Lagrangian and hence the field equations are gauge
+  invariant under
+  \begin{equation}
+    A_{\mu} \rightarrow A_\mu'=A_{\mu}+\partial_\mu\alpha(x^\sigma)
+  \end{equation}
+  with $\alpha$ an arbitrary function of space-time.
+  
+  Using Noether's theorem for translation invariance, we can compute
+  the Energy-momentum tensor $T^\mu_\nu$:
+  \begin{align}
+    ^{\text{Noe}}T^\mu_\nu & = \frac{\partial \mathcal{L}}{\partial A^\alpha_{,\mu}} \partial_\nu A^\alpha-\delta_\nu^\mu\mathcal{L}\\
+    & = -F^{\mu\alpha}\partial_\nu A_{\alpha}+\frac{1}{4}\delta_\nu^\mu F_{\alpha \beta}F^{\alpha\beta}
+  \end{align}
+  We note that this tensor is neither symmetric, nor gauge invariant, but it is conserved:
+  \begin{align}
+    \partial_\mu ^{\text{Noe}}T_{\nu}^\mu = 0
+  \end{align}
+
+  We shall now derive the symmetric Energy-momentum tensor defined by:
+  \begin{align}
+    ^{\text{Symm}}T_{\nu\mu} & = \frac{1}{2}\frac{\delta\left(\sqrt{-g}\mathcal{L}\right)}{\delta g^{\mu\nu}}\\
+    & = -F_{\mu}^\alpha F_{\nu\alpha}+\frac{1}{4}\eta_{\mu\nu} F_{\alpha\beta}F^{\alpha\beta}
+  \end{align}
+  We note that this time the tensor is, as expected, symmetric, but it is also gauge invariant. The difference between the two is the single term
+  \begin{align}
+    F^{\mu\alpha}\partial_{\alpha}A_\nu
+  \end{align}
+\end{section}
+
+\begin{section}{Some useful relation in Gravity and Gauge theories}
+  The Christoffel symbols of the first kind write:
+  \begin{equation}
+    \Gamma_{\mu \alpha \beta} = \frac{1}{2}\left(\partial_\alpha g_{\mu \beta}+\partial_\beta g_{\mu \alpha}-\partial_\mu g_{\alpha \beta}\right) = \frac{1}{2}\left(g_{\mu \beta,\alpha}+g_{\mu \alpha,\beta}-g_{\alpha \beta,\mu}\right)
+  \end{equation}
+  and the Christoffel symbols of the second kind:
+  \begin{equation}
+    \Gamma^{\mu}_{\alpha \beta} = \frac{1}{2}g^{\mu \nu}\left(\partial_\alpha g_{\nu \beta}+\partial_\beta g_{\nu \alpha}-\partial_\nu g_{\alpha \beta}\right) = \frac{1}{2}g^{\mu \nu}\left(g_{\nu \beta,\alpha}+g_{\nu \alpha,\beta}-g_{\alpha \beta,\nu}\right)
+  \end{equation}
+  The covariant derivative of a scalar reduce to the usual derivative:
+  \begin{equation}
+    \nabla_\mu\Phi = \partial_\mu\phi
+  \end{equation}
+  while the covariant derivative of a covariant vector field is defined by:
+  \begin{equation}
+    \nabla_\mu A_\nu = \partial_\mu A_\nu
+  \end{equation}
+\end{section}

@@ -1,0 +1,182 @@
+The Lagrangian we are interested in for a first try is
+\begin{equation}
+  \mathcal{L} = \left(\phi^*\phi+C\right)R+(D_\mu\phi)^*(D^\mu\phi)-\frac{\lambda}{2}(\phi^*\phi-v^2)^2 -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\label{eq:gravitylagrangian}
+\end{equation}
+where $R$ is the Ricci scalar, $C,\ \lambda,\ v$ real constants, $\phi$ is a
+complex scalar field, and
+\begin{align}
+  D_\mu\phi = (\partial_\mu-ieA_\mu)\phi\\
+  F_{\mu\nu} = \nabla_\mu A_\nu-\nabla_\nu A_\mu
+\end{align}
+with $\nabla_\mu A_\nu = \partial_\mu A_{\nu}-\Gamma_{\mu\nu}^\alpha
+A_{\alpha}$ the usual covariant derivative under change of coordinate
+system. It is understood that the indices are moved up and down using the metric tensor $g^{\mu\nu}$ or its inverse: $A^\mu = g^{\mu\alpha}A_\alpha$.
+
+The lagrangian (\ref{eq:gravitylagrangian}) is invariant under $U(1)$
+gauge transformation and under arbitrary change of coordinate.
+
+\begin{subsection}{Field equations}
+  Let's split the Lagrangian into two parts, as usually done:
+  \begin{align}
+    \mathcal{L} = \mathcal{L}_\text{G}+\mathcal{L}_\text{M}
+    \end{align}
+  where
+  \begin{align}
+    \mathcal{L}_\text{G} &= \left(\phi^*\phi+C\right)R,\\
+    \mathcal{L}_\text{M} &= (D_\mu\phi)^*(D^\mu\phi)-\frac{\lambda}{2}(\phi^*\phi-v^2)^2 -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}  
+  \end{align}
+  
+  The variation of the action for the gravitational field with respect
+  to the metric gives:
+  \begin{align}
+    \delta S_\text{G} &= \int\mathrm{d}^4x\delta\left[\sqrt{-g}(\phi^*\phi+C)R\right]\\
+    &= \int\mathrm{d}^4x\left[\delta\sqrt{-g}(\phi^*\phi+C) R + \sqrt{-g}(\phi^*\phi+C)\delta R\right]
+  \end{align}
+  By definition of the Ricci's scalar, we have:
+  \begin{align}
+    \delta R = \delta\left(g^{\mu\nu}R_{\mu\nu}\right) = \delta g^{\mu\nu}R_{\mu\nu}+g^{\mu\nu}\delta R_{\mu\nu}
+  \end{align}
+  The first term lead to the usual Einstein tensor, and the second
+  term can be written as a total covariant derivative:
+  \begin{align}
+    \delta R_{\mu\nu} &= \delta \left(\partial_{\alpha}\Gamma_{\mu\nu}^{\alpha}-\partial_{\nu}\Gamma_{\alpha\mu}^{\alpha}+\Gamma_{\alpha\rho}^{\alpha}\Gamma_{\mu\nu}^{\rho}-\Gamma_{\nu\rho}^{\alpha}\Gamma_{\alpha\mu}^{\rho}\right)\\
+    &= \partial_{\alpha}\delta \Gamma_{\mu\nu}^{\alpha} -\Gamma_{\alpha\mu}^{\rho}\delta\Gamma_{\nu\rho}^{\alpha}+\Gamma_{\alpha\rho}^{\alpha}\delta\Gamma_{\mu\nu}^{\rho} - \left(\partial_{\nu}\delta \Gamma_{\alpha\mu}^{\alpha}-\Gamma_{\mu\nu}^{\rho}\delta\Gamma_{\alpha\rho}^{\alpha}+\Gamma_{\nu\rho}^{\alpha}\delta\Gamma_{\alpha\mu}^{\rho}\right)\\
+    &=\nabla_\alpha\delta\Gamma_{\mu\nu}^{\alpha}-\nabla_\nu\delta\Gamma_{\alpha\mu}^{\alpha}
+  \end{align}
+  In the last equality, we add two terms which cancel each other, in
+  order to rebuild a valid covariant derivative of the variation of
+  the Christoffel symbols.
+
+  By definition of the covariant derivative we have:
+  \begin{align}
+    g^{\mu\nu}\left(\nabla_\alpha\delta\Gamma_{\mu\nu}^{\alpha}-\nabla_\nu\delta\Gamma_{\mu\nu}^{\alpha}\right) &= \nabla_\alpha\left(g^{\mu\nu}\delta\Gamma_{\mu\nu}^{\alpha}\right)-\nabla_\nu\left(g^{\mu\nu}\delta\Gamma_{\alpha\mu}^{\alpha}\right)\\
+    & = \nabla_\alpha\left(g^{\mu\nu}\delta\Gamma_{\mu\nu}^{\alpha}-g^{\mu\alpha}\delta\Gamma_{\beta\mu}^{\beta}\right)\\
+    & = \nabla_\alpha W^\alpha
+  \end{align}
+  and using the fact that, for an arbitrary vector:
+  \begin{align}
+    \partial_\alpha\left(\sqrt{-g}A^\alpha\right) = \sqrt{-g}\nabla_\alpha A^{\alpha}
+  \end{align}
+  the variation of the action gives:
+  \begin{align}
+    \delta S = \int\mathrm{d}^4\bigg[&\sqrt{-g}\left(\phi^*\phi+C\right)\left(R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R\right)\delta g^{\mu\nu}\\
+    &+ (\phi^*\phi+C)\partial_{\alpha}\left(\sqrt{-g}W^\alpha\right)\bigg] \\
+  \end{align}
+  At this stage we may integrate by part the last term, drop the
+  boundary terms,and express $W^\alpha$ in terms of the variation of
+  the metric. We eventually get:
+  \begin{align}
+    \delta S = \int\mathrm{d}^4x\sqrt{-g}\left((\phi^*\phi+C)G_{\mu\nu}-\partial_\alpha\phi^2 W^{\alpha}\right)
+  \end{align}
+  \begin{align}
+    W^\alpha = &g^{\mu\nu}\Gamma_{\alpha\mu\nu}\delta g^{\sigma \alpha}-g^{\mu\sigma} \Gamma_{\alpha\mu\nu}\delta g^{\nu \alpha}\\
+    &+ \frac{1}{2}\left(g^{\mu\nu}g^{\sigma\rho}- g^{\mu\sigma}g^{\nu\rho}\right)\left(\delta g_{\rho \mu,\nu}+\delta g_{\rho \nu,\mu}-\delta g_{\mu\nu,\rho}\right)\\
+    =& g^{\mu\nu}\Gamma_{\alpha\mu\nu}\delta g^{\sigma \alpha}-g^{\mu\sigma} \Gamma_{\alpha\mu\nu}\delta g^{\nu \alpha}\\
+    &+ \left(g^{\mu\nu}g^{\rho\sigma}-g^{\mu\rho}g^{\nu\sigma}\right)\delta g_{\rho\mu,\nu}
+  \end{align}
+  Substituting this result into the variation of the action and
+  integrating by part the last term leads to:
+  \begin{align}
+    \delta S_{\text{G}} =& \int\mathrm d^4x\sqrt{-g}G_{\mu\nu}\delta g^{\mu\nu}\\
+    &+\int\mathrm d^4x\sqrt{-g} \partial_\sigma\phi^2\left(g^{\mu\sigma} \Gamma_{\alpha\mu\nu}\delta g^{\nu \alpha}-g^{\mu\nu}\Gamma_{\alpha\mu\nu}\delta g^{\sigma \alpha}\right)\\
+    &+\int\mathrm d^4x\sqrt{-g} \partial_\nu\left[\sqrt{-g}\partial_\sigma\phi^2\left(g^{\mu\nu}g^{\rho\sigma}-g^{\mu\rho}g^{\nu\sigma}\right)\right]\delta g_{\rho\mu}
+  \end{align}
+\end{subsection}
+Using the fact that:
+\begin{align}
+  &\partial_\mu\left(\sqrt{-g}A_{\nu}\right) = \sqrt{-g}\left(\nabla_\mu A_\nu +\Gamma_{\mu\nu}^{\lambda}A_{\lambda}+\Gamma_{\mu\lambda}^{\lambda}A_{\nu}\right)\\
+  &\partial_\mu\left(\sqrt{-g}A^{\nu}\right) = \sqrt{-g}\left(\nabla_\mu A^\nu -\Gamma_{\mu\lambda}^{\nu}A^{\lambda}+\Gamma_{\mu\lambda}^{\lambda}A_{\nu}\right)
+\end{align}
+the last term writes:
+\begin{align}
+  & \sqrt{-g}\nabla_{\nu}\partial_\sigma\phi^2\left(g^{\mu\nu}g^{\rho\sigma}-g^{\mu\rho}g^{\nu\sigma}\right)\delta g_{\rho\mu}\\
+  +& \sqrt{-g}\left(\Gamma_{\nu\sigma}^{\lambda}\partial_\lambda\phi^2+\Gamma^{\lambda}_{\nu\lambda}\partial_\sigma\phi^2\right)\left(g^{\mu\nu}g^{\rho\sigma}-g^{\mu\rho}g^{\nu\sigma}\right)\delta g_{\rho\mu}\\
+  +& \sqrt{-g}\partial_\sigma\phi^2\partial_\nu\left(g^{\mu\nu}g^{\rho\sigma}-g^{\mu\rho}g^{\nu\sigma}\right)\delta g_{\rho\mu}
+\end{align}
+Expressing these terms with the variation of the inverse metric
+$\delta g_{\rho\mu} = -g_{\rho\beta}g_{\mu\delta}\delta g^{\beta\delta}$ we get:
+\begin{align}
+  &\sqrt{-g}\left(\nabla_\nu\partial^\nu\phi^2g_{\beta\delta}-\nabla_\delta\partial_\beta\phi^2\right)\delta g^{\beta\delta}\\
+  &+\sqrt{-g}\left(\partial_\lambda \phi^2g^{\lambda\nu}\Gamma_{\delta\beta\nu}-\partial_\beta\phi^2 g^{\lambda\nu}\Gamma_{\delta\lambda\nu}\right)\delta g^{\beta\delta}
+\end{align}
+and the variation of the gravity part of the lagrangian reduce to:
+\begin{align}
+  \delta \mathcal S_{\text{G}} = \int\mathrm d^4x\sqrt{-g}\left[G_{\mu\nu}+\nabla^2\phi^2g_{\mu\nu}-\nabla_\mu\nabla_\nu\phi^2\right]\delta g^{\mu\nu}
+\end{align}
+Noting that, due to the symmetry of the lower indices of the
+Christoffel symbols, the energy-strength tensor do not depend on the
+metric, neither does the covariant derivative of the Higgs field
+$\phi$, the variation of the matter's action with respect to the
+metric is easy to compute, and gives:
+\begin{align}
+  \delta\mathcal{S}_\phi = \int\mathrm d^4x\sqrt{-g}\left(\left(\mathrm{D}_\mu\phi\right)^*\mathrm{D}_\nu\phi+\frac{1}{2}F_{\mu\alpha}F^\alpha_{\hphantom{\alpha}\nu}\right)\delta g^{\mu\nu}
+\end{align}
+The field equation for the gravity eventually writes:
+\begin{align}
+  (\phi^*\phi+C)G_{\mu\nu}+\nabla^2\phi^2g_{\mu\nu}-\nabla_\mu\nabla_\nu\phi^2 + \left(\mathrm{D}_\mu\phi\right)^*\mathrm{D}_\nu\phi+\frac{1}{2}F_{\mu\alpha}F^\alpha_{\hphantom{\alpha}\nu} = 0
+\end{align}
+The equations for the Higgs field are:
+\begin{align}
+  &-R\phi^*+\mathrm{D}^\mu\mathrm{D}_\mu\phi^*+\lambda\left(\phi^*\phi -v^2\right)\phi^* = 0\\
+  &\text{c. c.} = 0
+\end{align}
+where
+\begin{align}
+  \mathrm{D}^\mu\mathrm{D}_\mu\phi^* = \nabla^\mu(\mathrm{D}_\mu\phi^*)+ieA^\mu\left(\mathrm{D}_\mu\phi^*\right)
+\end{align}
+Eventually, the field equation for the gauge field is:
+\begin{align}
+  \nabla_\nu F^{\mu\nu} = ie\left(\phi^*\mathrm{D}^\mu\phi-\phi\mathrm{D}^\mu\phi^*\right)
+\end{align}
+Hence, the system of field equation to solve is the following:
+\begin{align}
+  &(\phi^*\phi+C)G_{\mu\nu}+\nabla^2\phi^2g_{\mu\nu}-\nabla_\mu\nabla_\nu\phi^2 + \left(\mathrm{D}_\mu\phi\right)^*\mathrm{D}_\nu\phi+\frac{1}{2}F_{\mu\alpha}F^\alpha_{\hphantom{\alpha}\nu} = 0\label{eq:gravfieldeq_metric}\\
+  &\nabla_\nu F^{\mu\nu} + ie\left(\phi\mathrm{D}^\mu\phi^*-\phi^*\mathrm{D}^\mu\phi\right) = 0\label{eq:gravfieldeq_gauge}\\
+  &-R\phi^*+\mathrm{D}^\mu\mathrm{D}_\mu\phi^*+\lambda\left(\phi^*\phi -v^2\right)\phi^* = 0\label{eq:gravfieldeq_higgs}\\
+  &\text{c. c.} = 0
+\end{align}
+where $G_{\mu\nu}$ is Einstein's tensor.
+\begin{subsection}{Spherically symmetric ansatz}
+  The field equations are dimension-agnostic. We choose to work in a
+  $(2+1)$ dimensions space, with a spherical symmetry about the
+  coordinate origin. We assume that the most general form of a
+  spherically symmetric metric tensor is the following:
+  \begin{align}
+    \mathrm{d}s^2 = -\beta(r)\mathrm{d}t^2+\alpha(r)\mathrm{d}r^2 + r^2\mathrm{d}\theta^2
+  \end{align}
+  The ansatz for the Higgs and gauge fields is:
+  \begin{align}
+    &\phi(r,\theta) = ve^{i\theta}F(r)\\
+    &A_i(r,\theta) = -\frac{1}{er}\varepsilon_{ij}n_jK(r)
+  \end{align}
+ The only non zero componants of Einstein's tensor are:
+  \begin{align}
+    &G_{11} = -\frac { \alpha' \beta }{ 2r \alpha^{2}r}\\
+    &G_{22} =   -1/2\frac {\beta' }{r\beta}\\
+    &G_{33} =   -\frac{{r}^{2}}{4} \frac{ 2\alpha\beta\beta'' - \alpha\beta'^2 - \alpha'\beta'\beta}{ \alpha^2 \beta^2}\\
+  \end{align}
+  With this ansatz the field equation reduce to five non trivial
+  relation. The diagonal componants of (\ref{eq:gravfieldeq_metric})
+  give three equations:
+  \begin{align}
+\frac{2 v^2 \beta  F'^2}{\alpha }-\frac{c \beta  \alpha '}{2 r \alpha ^2}-\frac{v^2 F^2 \beta  \alpha '}{2 r \alpha ^2}+v^2 F F' \left(\frac{2 \beta }{r \alpha }-\frac{\beta  \alpha '}{\alpha ^2}\right)+\frac{2 v^2 F \beta  F''}{\alpha }=0\\
+    v^2 F'^2-\frac{K'^2}{2 e^2 r^2}-\frac{c \beta '}{2 r \beta }-\frac{v^2 F^2 \beta '}{2 r \beta }+v^2 F F' \left(-\frac{2}{r}-\frac{\beta '}{\beta }\right) = 0
+  \end{align}
+  \begin{multline}
+    -\frac{2 r^2 v^2 F'^2}{\alpha }-\frac{K'^2}{2 e^2 \alpha }+v^2 F F' \left(\frac{r^2 \alpha '}{\alpha ^2}-\frac{r^2 \beta '}{\alpha  \beta }\right)-\frac{2 r^2 v^2 F F''}{\alpha }\\
+        +(c+v^2F^2) \left(\frac{r^2 \alpha ' \beta '}{4 \alpha ^2 \beta }+\frac{r^2 \beta '^2}{4 \alpha  \beta ^2}-\frac{r^2 \beta ''}{2 \alpha  \beta }\right)+v^2 F^2 (1-K)^2 = 0
+  \end{multline}
+  Equation (\ref{eq:gravfieldeq_gauge}) reduce to the $\theta,\theta$
+  componant:
+  \begin{align}
+    -2 e v^2 F^2 (K-1)+\frac{1}{e \alpha }\left(\frac{K' \alpha '}{2  \alpha }+\frac{K'}{r}-\frac{K' \beta '}{2 \beta }-K''\right)=0
+  \end{align}
+  And equation (\ref{eq:gravfieldeq_higgs}) gives:
+  \begin{multline}
+    \frac{v F}{\alpha} \left(-\frac{\alpha '}{r \alpha }+\frac{\beta '}{r  \beta }-\frac{\alpha ' \beta '}{2 \alpha  \beta }-\frac{\beta '^2}{2  \beta ^2}+\frac{\beta ''}{  \beta }\right)-\frac{v F \left(K-1\right)^2}{r^2}\\
+    + v F' \left(\frac{1}{r \alpha }-\frac{\alpha '}{2 \alpha ^2}+\frac{\beta '}{2 \alpha  \beta }\right)+\frac{v F''}{\alpha }+v^3 \lambda  F \left(F^2-1\right)=0
+  \end{multline}
+Since we have five equations and only four degrees of freedom, for the
+system to be consistant they must be dependant, and one equation
+should find how one equation can be expressed in terms of the others.
+\end{subsection}

@@ -1,0 +1,67 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Georgi-Glashow model with $SU(2)$ gauge symmetry}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Energy functionnal}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}Effects of the parameters}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}The Vortex in $(2+1)$ dimensions with $U(1)$ gauge symmetry}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Numerical integration of the equations of motion}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Analytical continuation of the String field configuration in $(1+1)$ dimensions}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Introduction}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Numerical Scheme}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Integrating the Vortex and Monopole}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}Integrating the solution on the complex plane.}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5}Validity tests}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.1}Riemann sheet: the square root}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.2}The logarithm}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.3}Sine-Gordon field equation}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6}Application to the Vortex in $(2+1)$ dimensions}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.6.1}BPS limit}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.6.2}Non-BPS limit}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.7}Application to the Monopole in $(3+1)$ dimensions}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.7.1}BPS limit}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.7.2}Non-BPS limit}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.8}Conclusion}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Monopoles in Gravity}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Field equations}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Spherically symmetric ansatz}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Appendices}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A}Sign conventions}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1}Wald conventions}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.2}Weinberg conventions}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B}Substitution of the 't\nobreakspace {}Hooft-Polyakov ansatz}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C}Energy functional for the monopole}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {D}LU decomposition algorithm}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {E}Noether and Symmetric Energy-Momentum tensor for the free Electrodynamics}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {F}Some useful relation in Gravity and Gauge theories}{20}
