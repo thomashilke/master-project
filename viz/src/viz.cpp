@@ -1,10 +1,11 @@
 #include <iostream>
 #include <fstream>
 
-#include <renderer/renderer.hpp>
-#include <utils/tuple.hpp>
-#include <utils/transform.hpp>
 #include <cmath>
+
+#include "SmartPaper/renderer/renderer.hpp"
+#include "SmartPaper/utils/tuple.hpp"
+#include "SmartPaper/utils/transform.hpp"
 
 #include "dampeddynamic.hpp"
 /*
