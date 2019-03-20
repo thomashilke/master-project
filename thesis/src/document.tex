@@ -11,8 +11,17 @@
 \usepackage{lipsum}
 \usepackage{color}
 \usepackage{changepage}
+\usepackage[backend=biber,
+  style=alphabetic,
+  sortlocale=fr_CH,
+  natbib=true,
+  url=false,
+  doi=true,
+  eprint=false]{biblatex}
+\renewcommand\multicitedelim{\addcomma\space}
+\addbibresource{../src/references.bib}
 
-\graphicspath{{./figures/}}
+\graphicspath{{../figures/}}
 
 %\title{\begin{small}\sc{Particle Physics and Cosmology}\end{small}\\
 %  On the Analytical Continuation of Solitons in Classical Field Theories}
@@ -48,7 +57,7 @@
 \addappheadtotoc
 \input{annexes}
 
-\bibliography{collec}
-\bibliographystyle{plain}
+%\bibliographystyle{plain}
+\printbibliography[heading=bibintoc]
 
 \end{document}
