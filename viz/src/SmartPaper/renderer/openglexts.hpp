@@ -8,7 +8,7 @@
 #include <GL/glx.h>
 #include "glext.h"
 
-#include <utils/singleton.hpp>
+#include "../utils/singleton.hpp"
 
 struct OpenGLExtension
 {

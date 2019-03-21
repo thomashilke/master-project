@@ -2,7 +2,7 @@ CXX = g++
 DEPS_BIN = g++
 CXXFLAGS = -g -std=c++11
 LDFLAGS = -g
-LDLIB = 
+LDLIB = -lGL -lX11
 AR = ar
 ARFLAGS = rc
 MKDIR = mkdir
@@ -26,7 +26,7 @@ BIN = bin/viz bin/mktestfile
 
 
 #bin/...: ...
-bin/viz: build/src/viz.o
+bin/viz: build/src/viz.o build/src/SmartPaper/renderer/renderer.o build/src/SmartPaper/renderer/texture.o build/src/SmartPaper/renderer/x11utilities.o
 bin/mktestfile: build/src/mktestfile.o
 
 LIB = 

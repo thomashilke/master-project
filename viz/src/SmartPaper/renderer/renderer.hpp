@@ -9,8 +9,8 @@
 #include "eventmanager.hpp"
 
 #include "openglexts.hpp"
-#include <utils/smartptr.hpp>
-#include <utils/tinymatrix/matrix.hpp>
+#include "../utils/smartptr.hpp"
+#include "../utils/tinymatrix/matrix.hpp"
 
 #include "texture.hpp"
 #include "vertexbuffer.hpp"

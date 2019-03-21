@@ -3,6 +3,8 @@
 
 #include <cmath>
 
+#include <unistd.h>
+
 #include "SmartPaper/renderer/renderer.hpp"
 #include "SmartPaper/utils/tuple.hpp"
 #include "SmartPaper/utils/transform.hpp"
@@ -441,8 +443,8 @@ int main(int argc, char** argv)
       for(unsigned int i(0);i<vbs.size();++i)
 	{
 	  br.setVertexBuffer<vertex>(vbs[i]);
-	  br.DrawPrimitives(PRI_POINTS, vbs[i]->getSize());
-	  //br.DrawPrimitives(PRI_TRIANGLES, vbs[i]->getSize()/3);
+	  //br.DrawPrimitives(PRI_POINTS, vbs[i]->getSize());
+	  br.DrawPrimitives(PRI_TRIANGLES, vbs[i]->getSize()/3);
 	}
 
       br.EndFrame();

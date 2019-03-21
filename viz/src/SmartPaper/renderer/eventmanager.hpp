@@ -1,8 +1,8 @@
 #ifndef CEVENTMANAGER
 #define CEVENTMANAGER
 
-#include <utils/smartptr.hpp>
-#include <utils/tinymatrix/vector.hpp>
+#include "../utils/smartptr.hpp"
+#include "../utils/tinymatrix/vector.hpp"
 #include "x11utilities.hpp"
 
 typedef Vector<int,2> vec2i;

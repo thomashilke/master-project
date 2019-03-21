@@ -3,9 +3,9 @@
 
 #include <string>
 #include <GL/gl.h>
-#include <utils/smartptr.hpp>
 
-#include <utils/color.hpp>
+#include "../utils/smartptr.hpp"
+#include "../utils/color.hpp"
 
 template<PixelStructure ps>
 class Texture
